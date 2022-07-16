@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import Accordion from "./Components/Accordion";
+import Accordion from "./Components/Accordion/Accordion";
 import {Rating} from "./Components/Rating";
 import {OnOff} from "./Components/OnnOff/OnOff";
+import UnControlledAccordion from "./Components/Accordion/UnControlledAccordion";
 
 function App() {
     console.log('APP')
@@ -33,8 +34,10 @@ function App() {
             <PageTitle title={'My friends'}/>
             Article 1
             <Rating value={3}/>
-            <Accordion titleValue={"Menu"} collapsed={true}/>
-            <Accordion titleValue={"Users"} collapsed={false}/>
+           {/* <Accordion titleValue={"Menu"} collapsed={true}/>
+            <Accordion titleValue={"Users"} collapsed={false}/>*/}
+            <UnControlledAccordion titleValue={"Menu"}/>
+            <UnControlledAccordion titleValue={"Users"}/>
             Article 2
             <Rating value={0}/>
             <Rating value={1}/>
