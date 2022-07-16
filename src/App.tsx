@@ -22,9 +22,12 @@ function App() {
           Learn React
         </a>
       </header>*/}
-            <OnOff on={true}/>
-            <OnOff on={false}/>
-            <OnOff on={true}/>
+            <OnOff />
+            <OnOff />
+            <OnOff />
+            <OnOff />
+           {/* <OnOff on={false}/>
+            <OnOff on={true}/>*/}
 
             <PageTitle title={'This is APP components'}/>
             <PageTitle title={'My friends'}/>
