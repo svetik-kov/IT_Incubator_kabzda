@@ -23,8 +23,8 @@ function App() {
         </a>
       </header>*/}
             <OnOff on={true}/>
-
-
+            <OnOff on={false}/>
+            <OnOff on={true}/>
 
             <PageTitle title={'This is APP components'}/>
             <PageTitle title={'My friends'}/>

@@ -11,7 +11,7 @@ export const OnOff = (props: OnOffPropsType) => {
         border: '1px solid black',
         display: 'inline-block',
                padding: '2px',
-        backgroundColor:'green'
+        backgroundColor:props.on?'green':'white'
 
     }
     const offStyle = {
@@ -21,7 +21,7 @@ export const OnOff = (props: OnOffPropsType) => {
         display: 'inline-block',
         marginLeft: '2px',
         padding: '2px',
-        backgroundColor:'red'
+        backgroundColor:props.on?'white':'red'
     }
     const indicatorStyle = {
         width: '10px',//ширина
@@ -31,7 +31,7 @@ export const OnOff = (props: OnOffPropsType) => {
         display: 'inline-block',//выстраивание в линию
         marginLeft: '5px',//отступ слева
         padding: '2px',//внутренние отступы
-        backgroundColor:'green'//цвет
+        backgroundColor:props.on?'green':'red'//цвет
 
     }
 
