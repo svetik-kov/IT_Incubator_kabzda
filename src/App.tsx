@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Accordion from "./Components/Accordion";
+import {Rating} from "./Components/Rating";
 
 function App() {
-  return (
-    <div className="App">
-    {/*  <header className="App-header">
+    console.log('APP')
+    return (
+        <div className="App">
+            {/*  <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -20,35 +22,29 @@ function App() {
         </a>
       </header>*/}
 
-      This is APP components
-        <Rating/>
-        <Accordion/>
-    </div>
-  );
-}
+            <PageTitle title={'This is APP components'} />
+            <PageTitle title={'My friends'} />
+            Article 1
+            <Rating value={3}/>
+            <Accordion/>
+            Article 2
+            <Rating value={0}/>
+            <Rating value={1}/>
+            <Rating value={2}/>
+            <Rating value={3}/>
+            <Rating value={4}/>
+            <Rating value={5}/>
 
-
-function Rating(){
-   return(
-       <div>
-        <div> Star</div>
-        <div> Star</div>
-        <div> Star</div>
-        <div> Star</div>
-    </div>)
-}
-
-function Accordion(){
-    return (
-        <div>
-            <h3>Menu</h3>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
         </div>
+    );
+}
+
+function PageTitle (props:any) {
+
+    return (
+        <div> <h1>{props.title}</h1></div>
     )
+
 }
 
 
