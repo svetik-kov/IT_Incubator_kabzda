@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Accordion from "./Components/Accordion";
 import {Rating} from "./Components/Rating";
+import {OnOff} from "./Components/OnnOff/OnOff";
 
 function App() {
     console.log('APP')
@@ -21,12 +22,15 @@ function App() {
           Learn React
         </a>
       </header>*/}
+            <OnOff on={true}/>
 
-            <PageTitle title={'This is APP components'} />
-            <PageTitle title={'My friends'} />
+
+
+            <PageTitle title={'This is APP components'}/>
+            <PageTitle title={'My friends'}/>
             Article 1
             <Rating value={3}/>
-            <Accordion titleValue={"Menu"} collapsed={true} />
+            <Accordion titleValue={"Menu"} collapsed={true}/>
             <Accordion titleValue={"Users"} collapsed={false}/>
             Article 2
             <Rating value={0}/>
@@ -40,13 +44,14 @@ function App() {
     );
 }
 
-type PageTitlePropsType={
-    title:string
+type PageTitlePropsType = {
+    title: string
 }
-function PageTitle (props:PageTitlePropsType) {
+
+function PageTitle(props: PageTitlePropsType) {
 
     return (
-        <div> <h1>{props.title}</h1></div>
+        <div><h1>{props.title}</h1></div>
     )
 
 }
