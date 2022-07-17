@@ -8,7 +8,7 @@ import {UnControlledRating} from "./Components/Rating/UnControlledRating";
 
 function App() {
    let [ratingValue,setRatingValue]=useState<RatingValueType>(0)
-
+ let [accordionCallapsed,setaccordionCallapsed]=useState( true)
 
     return (
         <div className="App">
@@ -24,10 +24,10 @@ function App() {
             Article 1
 
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <Accordion titleValue={"Menu"} collapsed={true}/>
-           {/* <Accordion titleValue={"Users"} collapsed={false}/>*/}
+            <Accordion titleValue={"Menu"} collapsed={accordionCallapsed} callBack={setaccordionCallapsed}/>
+
             <UnControlledAccordion titleValue={"Menu"}/>
-         {/*   <UnControlledAccordion titleValue={"Users"}/>*/}
+
             Article 2
             <UnControlledRating/>
 

@@ -2,23 +2,13 @@ import React from "react";
 type AccordionPropsType={
     titleValue:string
     collapsed:boolean
+    callBack:(collapsed:boolean)=>void
 }
 function Accordion(props:AccordionPropsType) {
-/*if (props.collapsed===true){
-    return (
-        <div>
-            <AccordionTitle title={props.titleValue}/>
 
-        </div>)
-} else {
-    return <div>
-        <AccordionTitle title={props.titleValue}/>
-        <AccordionBody />
-           </div>
-}*/
     return(
         <div>
-            <AccordionTitle title={props.titleValue}/>
+            <AccordionTitle title={props.titleValue} callBack={()=>props.callBack(!props.collapsed)}/>
             {!props.collapsed && <AccordionBody/>}
         </div>
         )
@@ -28,9 +18,10 @@ function Accordion(props:AccordionPropsType) {
 }
 type AccordionTitlePropsType={
     title:string
+    callBack:()=>void
 }
 function AccordionTitle(props:AccordionTitlePropsType) {
-    return <h3>{props.title}</h3>
+    return <h3 onClick={props.callBack}>{props.title}</h3>
 }
 
 function AccordionBody() {
