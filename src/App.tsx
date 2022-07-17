@@ -14,10 +14,8 @@ function App() {
     return (
         <div className="App">
 
-            <OnOff on={swichOn} onchange={( on: boolean)=> setswichOn(on)}/>
-            {/* <OnOff />
-            <OnOff />
-            <OnOff />*/}
+            <OnOff on={swichOn} onchange={ setswichOn}/>
+
 
 
             <PageTitle title={'This is APP components'}/>
@@ -32,7 +30,7 @@ function App() {
             Article 2
             <UnControlledRating/>
 
-            <UnControlledOnOff/>
+            <UnControlledOnOff onChange={ setswichOn}/> {swichOn.toString()}
         </div>
     );
 }
