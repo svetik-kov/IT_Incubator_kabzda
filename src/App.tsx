@@ -1,50 +1,39 @@
 import React from 'react';
 import './App.css';
 import Accordion from "./Components/Accordion/Accordion";
-import {Rating} from "./Components/Rating";
+import {Rating} from "./Components/Rating/Rating";
 import {OnOff} from "./Components/OnnOff/OnOff";
 import UnControlledAccordion from "./Components/Accordion/UnControlledAccordion";
+import {UnControlledRating} from "./Components/Rating/UnControlledRating";
 
 function App() {
     console.log('APP')
     return (
         <div className="App">
-            {/*  <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>*/}
+
             <OnOff />
             <OnOff />
             <OnOff />
             <OnOff />
-           {/* <OnOff on={false}/>
-            <OnOff on={true}/>*/}
+
 
             <PageTitle title={'This is APP components'}/>
             <PageTitle title={'My friends'}/>
             Article 1
-            <Rating value={3}/>
+            <UnControlledRating/>
+           {/* <Rating value={3}/>*/}
            {/* <Accordion titleValue={"Menu"} collapsed={true}/>
             <Accordion titleValue={"Users"} collapsed={false}/>*/}
             <UnControlledAccordion titleValue={"Menu"}/>
             <UnControlledAccordion titleValue={"Users"}/>
             Article 2
-            <Rating value={0}/>
+            <UnControlledRating/>
+          {/*  <Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>
             <Rating value={3}/>
             <Rating value={4}/>
-            <Rating value={5}/>
+            <Rating value={5}/>*/}
 
         </div>
     );
